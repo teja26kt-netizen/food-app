@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Food Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <nav class="navbar-standard">
+        <div class="logo">
+            <img src="image/ff.png">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+        <div class="icon">
+            <i class="fa-solid fa-moon" id="themeIcon" onclick="toggleTheme()"
+                style="margin-right: 15px; cursor: pointer;"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-heart"></i>
+            <a href="cart.html" style="position: relative; text-decoration: none; color: inherit;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartBadge"
+                    style="position: absolute; top: -10px; right: -12px; background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; font-weight: bold; display: none;">0</span>
+            </a>
+        </div>
+    </nav>
+    <div style="padding-top: 100px;"></div> <!-- Spacer -->
+
+    <!--Menu-->
+    <div class="menu" id="Menu">
+        <h1>Our<span>Menu</span></h1>
+
+        <div class="menu_box">
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/buger.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Burger</h2>
+                    <h3>399 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Burger')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/pasta.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>pasta</h2>
+                    <h3>299 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Pasta')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/lasagna.webp">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>lasagna</h2>
+                    <h3>499 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Lasagna')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/chocolate_Drink.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Drink</h2>
+                    <h3>199 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Drink')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/pizza.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>pizza</h2>
+                    <h3>499 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Pizza')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/Hot_dog.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Hot Dog</h2>
+                    <h3>399 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Hot Dog')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/juse.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Juice</h2>
+                    <h3>299 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Juice')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/biryani.webp">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Biryani</h2>
+                    <h3>499 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Biryani')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/chocolate.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Chocolate</h2>
+                    <h3>49 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Chocolate')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/ice_cream.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Ice Cream</h2>
+                    <h3>149 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Ice Cream')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/Spanchi.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Spanchi</h2>
+                    <h3>199 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Spanchi')">Select</button>
+                </div>
+            </div>
+
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="image/sandwich.jpg">
+                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>Sandwich</h2>
+                    <h3>249 Rs</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="showSubMenu('Sandwich')">Select</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sub Menu Modal -->
+    <div id="subMenuModal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); align-items: center; justify-content: center; z-index: 1000000;">
+        <div class="sub-menu-content"
+            style="background: var(--card-bg); padding: 30px; border-radius: 10px; width: 90%; max-width: 500px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); position: relative;">
+            <i class="fa-solid fa-xmark" onclick="closeSubMenu()"
+                style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: var(--text-color);"></i>
+            <h2 id="subMenuTitle"
+                style="margin-top: 0; margin-bottom: 20px; color: #fac031; text-align: center; font-size: 28px;">Options
+            </h2>
+            <div id="subMenuContainer"
+                style="display: flex; flex-direction: column; max-height: 60vh; overflow-y: auto;">
+                <!-- Dynamically injected items go here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
